@@ -1,0 +1,269 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    color: #fff;
+
+    background-color: #000;
+
+    overflow-x: hidden;
+
+    position: relative;
+
+}
+
+.background-image {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-image: url('linux-background.jpg'); /* يمكن استبدالها بالصورة المطلوبة */
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    z-index: -2;
+
+    opacity: 0.2;
+
+}
+
+#networkCanvas {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    z-index: -1;
+
+}
+
+.container {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+header {
+
+    text-align: center;
+
+    padding: 40px 0;
+
+}
+
+header h1 {
+
+    font-size: 4rem;
+
+    color: #fff;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.intro {
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    margin-bottom: 40px;
+
+    border: 1px solid #333;
+
+}
+
+.intro h2 {
+
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+
+    color: #fff;
+
+}
+
+.intro p {
+
+    font-size: 1.1rem;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+
+    color: #ccc;
+
+}
+
+.cards {
+
+    margin-bottom: 40px;
+
+}
+
+.cards h2 {
+
+    font-size: 2rem;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    color: #fff;
+
+}
+
+.card-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+
+}
+
+.card {
+
+    display: block;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    text-decoration: none;
+
+    color: #fff;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    border: 1px solid #333;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.card::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: linear-gradient(45deg, #000, #333);
+
+    opacity: 0.8;
+
+    z-index: -1;
+
+}
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+
+}
+
+.card-content {
+
+    text-align: center;
+
+}
+
+.card-content h3 {
+
+    font-size: 1.5rem;
+
+    margin-bottom: 10px;
+
+    color: #fff;
+
+}
+
+.card-content p {
+
+    color: #ccc;
+
+}
+
+footer {
+
+    text-align: center;
+
+    padding: 20px;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    border-radius: 10px;
+
+    border: 1px solid #333;
+
+}
+
+footer p {
+
+    color: #ccc;
+
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    header h1 {
+
+        font-size: 3rem;
+
+    }
+
+    
